@@ -1,0 +1,8 @@
+2023-11-28T10:56:42.795844 404 : [{"timestamp":"2023-11-28T15:56:42.780+00:00","status":404,"error":"Not Found","message":"No message available","path":"/quiz/com.techelevator.christmas.model.AuthenticatedUser@54a7079e"}]
+2023-11-28T10:58:12.910128 500 : [{"timestamp":"2023-11-28T15:58:12.907+00:00","status":500,"error":"Internal Server Error","message":"Error updating high score for user: com.techelevator.christmas.model.AuthenticatedUser@54a7079e","path":"/quiz/com.techelevator.christmas.model.AuthenticatedUser@54a7079e/6"}]
+2023-11-28T11:12:16.6419359 404 : [{"timestamp":"2023-11-28T16:12:16.620+00:00","status":404,"error":"Not Found","message":"No message available","path":"/quiz/azon"}]
+2023-11-28T11:12:51.5015648 404 : [{"timestamp":"2023-11-28T16:12:51.487+00:00","status":404,"error":"Not Found","message":"No message available","path":"/quiz/azon"}]
+2023-11-28T11:16:02.3229342 404 : [{"timestamp":"2023-11-28T16:15:59.260+00:00","status":404,"error":"Not Found","message":"No message available","path":"/quiz/azon"}]
+2023-11-28T11:17:06.4505185 404 : [{"timestamp":"2023-11-28T16:17:02.372+00:00","status":404,"error":"Not Found","message":"No message available","path":"/quiz/score"}]
+2023-11-28T11:23:29.2037223 500 : [{"timestamp":"2023-11-28T16:23:29.178+00:00","status":500,"error":"Internal Server Error","message":"No message available","path":"/quiz/scores"}]
+2023-11-28T11:29:10.7066825 500 : [{"timestamp":"2023-11-28T16:29:10.688+00:00","status":500,"error":"Internal Server Error","message":"No message available","path":"/quiz/scores"}]
