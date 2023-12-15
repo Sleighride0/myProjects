@@ -1,0 +1,21 @@
+Bug 1
+-----
+Test that demonstrates problem:
+    getStates_returns_all_states
+Expected output:
+    getState() returns a list of 3 states
+Actual output:
+    getState() was returning a list of 1 state
+How did you fix this bug?
+    Replaced if(results.next()) with while(results.next()) in getState() so all results are processed.
+
+Bug 2
+_____
+Test that demonstrates problem:
+    getCitiesByState_with_valid_state_returns_correct_cities
+Excected output:
+    2 ciites should have been added to my list
+Actual output:
+    InvalidResultSetAccessException: Invalid column name; nested exception is java.sql.SQLException: Invalid column name
+Hod did you fix this bug?
+    getCitiesByState() method was missing state_abbreviation in the sql string.

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rsvpstyles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bits && Bytes</h1>
+        <p>Welcome to the internet's best restaurant!</p>
+    </header>
+    <main>
+        <a href="index.html">View our menu</a>
+        <h2>Reserve your table now!</h2>
+        <form action="/api/reservation" method="post">
+            <div>
+                <label for="firstName">Guest first name: </label>
+                <input type="text" name="fName" id="firstName" value="hello">
+            </div>
+            <div>
+                <label for="lastName">Guest last name: </label>
+                <input type="text" name="lName" id="lastName">
+            </div>
+            <div>
+                <label for="dateOfReservation">Date of reservation: </label>
+                <input type="date" id="dateOfReservation" name="reservationDate">
+            </div>
+            <div>
+                <label for="numberOfGuests">Number of starting guests: </label>
+                <input type="number" id="numberOfGuests" name="numberOfGuests">
+            </div>
+            <div>
+                <input type="submit" value="Send your reservation">
+            </div>
+           
+        </form>
+    </main>
+</body>
+
+</html>

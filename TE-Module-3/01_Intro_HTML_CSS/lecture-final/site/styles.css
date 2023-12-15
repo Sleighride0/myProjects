@@ -1,0 +1,17 @@
+img {
+    height: 200px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 40px;
+    color: rgb(51, 155, 224);
+
+}
+
+table {
+    background-color: rgb(112, 112, 235);
+}

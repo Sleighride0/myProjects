@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My James Bond Form Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="infostyles.css">
+</head>
+
+<body>
+    <header>
+        <h1>James Bond Form</h1>
+        <p>Register here for weekly updates</p>
+    </header>
+    <form action="api/Register">
+        <label for="name">Name</label>
+        <input type="text" id="name" name ="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="date-of-birth">Date of birth</label>
+        <input type="date" name="date-of-birth" id="date-of-birth">
+        <label for="favorite-color">Favorite Color</label>
+        <input type="color" id="favorite-color" name="favorite-color">
+        <label for="lucky-number">Lucky Number</label>
+        <input type="number" name="lucky-number" id="lucky-number">
+        <label for="confirmation">Confirmation</label>
+        <input type="checkbox" name="confirmation" id="confirmation">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+
+</html>
