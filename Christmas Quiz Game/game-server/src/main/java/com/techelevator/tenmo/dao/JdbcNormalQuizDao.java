@@ -33,6 +33,17 @@ public class JdbcNormalQuizDao implements QuizDao {
         } //else call resetQuestionAsked()
         return question;
     }
+    public Question getHardQuizQuestion (int questionId){
+        Question question = null;
+        String sql = "SELECT question_id, question_posed, option_a, option_b, option_c, option_d, correct_answer FROM question\n" +
+                "WHERE question_id IN (SELECT question_id FROM quiz_question WHERE quiz_id = 2) AND question_id = ?;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, questionId);
+        if(results.next()){
+            question = mapRowToQuestion(results);
+            
+        }
+        return question;
+    }
     public List<Question> getNormalQuiz (){
         List<Question> questions = new ArrayList<>();
         String sql = "SELECT question_id, question_posed, option_a, option_b, option_c, option_d, correct_answer FROM question\n" +
@@ -62,7 +73,7 @@ public class JdbcNormalQuizDao implements QuizDao {
     }
 
     public int setUserHighScore(int score, String username) {
-        int updatedHighScore = 0; // Default value if the update is not successful
+        int updatedHighScore = 0;
 
         int currentHigh = getUserHighScore(username);
         if (score > currentHigh) {
@@ -70,7 +81,7 @@ public class JdbcNormalQuizDao implements QuizDao {
             try {
                 int rowsAffected = jdbcTemplate.update(sql, score, username);
                 if (rowsAffected > 0) {
-                    updatedHighScore = score; // Set the updated high score
+                    updatedHighScore = score;
                 } else {
                     throw new RuntimeException("Failed to update high score for user: " + username);
                 }
