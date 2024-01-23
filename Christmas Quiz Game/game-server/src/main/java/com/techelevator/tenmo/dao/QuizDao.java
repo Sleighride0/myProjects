@@ -8,7 +8,9 @@ public interface QuizDao {
 
     public Question getNormalQuizQuestion (int questionId);
     public List<Question> getNormalQuiz();
+    public List<Question> getHardQuiz();
     public int getUserHighScore(String username);
     public int setUserHighScore (int score, String username);
+
 
 }

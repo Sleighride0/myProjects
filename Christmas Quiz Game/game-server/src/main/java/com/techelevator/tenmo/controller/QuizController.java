@@ -30,6 +30,12 @@ public class QuizController {
     public List<Question> getNormalQuiz() {
         return quizDao.getNormalQuiz();
     }
+    @RequestMapping (path = "/quiz/hard", method = RequestMethod.GET)
+    public List<Question> getHardQuiz() {
+        return quizDao.getHardQuiz();
+    }
+
+
 
     @RequestMapping (path = "/quiz/scores", method = RequestMethod.GET)
     public int getHighScore(Principal principal){
