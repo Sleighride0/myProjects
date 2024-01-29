@@ -46,4 +46,8 @@ public class QuizController {
     public int setHighScore (@PathVariable String username, @PathVariable (required =false) Integer score){
         return quizDao.setUserHighScore(score, username);
     }
+    @RequestMapping (path = "/quiz/highScores", method = RequestMethod.GET)
+    public List<User> getTopTenHighScores(){
+        return quizDao.getTopTenHighScores();
+    }
 }

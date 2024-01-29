@@ -2,6 +2,7 @@ package com.techelevator.tenmo.dao;
 
 import com.techelevator.tenmo.exception.DaoException;
 import com.techelevator.tenmo.model.Question;
+import com.techelevator.tenmo.model.User;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -72,6 +73,24 @@ public class JdbcNormalQuizDao implements QuizDao {
             throw new DaoException("Unable to connect to server or database", e);
         }
         return highScore;
+    }
+    public List<User> getTopTenHighScores() {
+        List<User> highScores = new ArrayList<>();
+        String sql = "SELECT username, normal_quiz_high_score from game_user\n" +
+                "ORDER BY normal_quiz_high_score DESC\n" +
+                "LIMIT 10;";
+        try {
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
+            while (rowSet.next()) {
+                User user = new User();
+                user.setUsername(rowSet.getString("username"));
+                user.setNormalHighScore(rowSet.getInt("normal_quiz_high_score"));
+                highScores.add(user);
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database", e);
+        }
+        return highScores;
     }
 
     public int setUserHighScore(int score, String username) {
