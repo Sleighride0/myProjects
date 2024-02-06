@@ -27,7 +27,6 @@ public class JdbcNormalQuizDao implements QuizDao {
         Question question = null;
         String sql = "SELECT question_id, question_posed, option_a, option_b, option_c, option_d, correct_answer FROM question\n" +
                 "WHERE question_id IN (SELECT question_id FROM quiz_question WHERE quiz_id = 1) AND question_id = ?;";
-        //will this work if i don't ask for the answer? i want that hidden from the user
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, questionId);
         if(results.next()){
             question = mapRowToQuestion(results);
@@ -40,7 +39,7 @@ public class JdbcNormalQuizDao implements QuizDao {
         List<Question> questions = new ArrayList<>();
         String sql = "SELECT question_id, question_posed, option_a, option_b, option_c, option_d, correct_answer FROM question\n" +
                 "WHERE question_id IN (SELECT question_id FROM quiz_question WHERE quiz_id = 1)";
-        //will this work if i dont ask for the answer? i want that hidden from the user
+        //check later: will this work if i dont ask for the answer? i want that hidden from the user
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
         while(results.next()){
             Question question = mapRowToQuestion(results);
