@@ -73,6 +73,14 @@ INSERT INTO question (question_posed, option_a, option_b, option_c, option_d, co
 
 INSERT INTO quiz_question (quiz_id, question_id) VALUES (1,1);
 INSERT INTO quiz_question (quiz_id, question_id) VALUES (1,2);
+INSERT INTO quiz_question (quiz_id, question_id) VALUES (1,3);
+INSERT INTO quiz_question (quiz_id, question_id) VALUES (1,4);
+INSERT INTO quiz_question (quiz_id, question_id) VALUES (1,5);
+INSERT INTO quiz_question (quiz_id, question_id) VALUES (1,6);
+
+
+
+
 -- CREATE TABLE transfer (
 -- 	transfer_id int NOT NULL DEFAULT nextval('seq_transfer_id'),
 -- 	transfer_type_id int NOT NULL,
